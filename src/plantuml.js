@@ -59,7 +59,7 @@ export function replace(content, selector, config) {
 export function install(hook, vm) {
   const config = Object.assign({}, {
     skin: 'default',
-    renderSvgAsObject: false
+    renderSvgAsObject: true
   }, vm.config.plantuml)
   hook.afterEach(function (content) {
     return replace(content, SELECTOR, config)
