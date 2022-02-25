@@ -47,7 +47,7 @@ export function replace(content, selector, config) {
 
   (dom.findAll($, selector) || []).forEach(function (element) {
     var parent = element.parentNode
-    var planted = dom.create('p', plant(element.innerText, config))
+    var planted = dom.create('div', plant(element.innerText, config))
     if (parent) {
       planted.dataset.lang = LANG
       element.parentNode.replaceChild(planted, element)
