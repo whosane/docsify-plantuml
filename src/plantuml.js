@@ -11,8 +11,8 @@ export function plant(content, config) {
     var svgUrl = urlPrefix + encode(createUrls(content))
     return '<object type="image/svg+xml" data="' + svgUrl + '" />'
   }
-  var svgUrl = urlPrefix + encode(content)
-  return '<img src="' + svgUrl + '" />'
+  var svgUrl = urlPrefix + encode(createUrls(content))
+  return '<object type="image/svg+xml" data="' + svgUrl + '" />'
 }
 
 function createUrls(content) {
